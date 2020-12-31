@@ -5,22 +5,18 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class Operator {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
     @Column(nullable = false)
-    public String identifier;
+    public String name;
 
-    @Column(nullable = false)
-    public String password;
+    public String description;
 
-    public String email;
-
-    public String mobile;
-
-    @ManyToMany(mappedBy = "operator")
+    @ManyToMany(mappedBy = "role")
     public Set<Authority> authorities = new HashSet<>();
+
 }

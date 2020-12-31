@@ -1,0 +1,27 @@
+= Bismillah
+
+== Authentication Plan
+
+* Role
+** Name
+** Description
+
+
+* AuthorityGroup
+** Name
+** DisplayName
+** NavGroup
+** uiUrl
+** appUrl
+
+* Authority
+** Name
+** DisplayName
+** AppURL
+** AuthorityGroup
+
+* Role_Authority
+* Operator_Authority
+
+
+
