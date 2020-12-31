@@ -29,12 +29,13 @@ public class Authority {
     @OnDelete(action = OnDeleteAction.CASCADE)
     public AuthorityGroup authorityGroup;
 
-    @JoinTable
+
     @ManyToMany(cascade = CascadeType.ALL)
-    public Set<Role> roles = new HashSet<>();
+    @JoinTable
+    public Set<Role> role = new HashSet<>();
 
 
     @JoinTable
     @ManyToMany(cascade = CascadeType.ALL)
-    public Set<Operator> operators = new HashSet<>();
+    public Set<Operator> operator = new HashSet<>();
 }

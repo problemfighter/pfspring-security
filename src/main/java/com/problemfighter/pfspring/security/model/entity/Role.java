@@ -14,9 +14,10 @@ public class Role {
     @Column(nullable = false)
     public String name;
 
+    @Column(columnDefinition="TEXT")
     public String description;
 
     @ManyToMany(mappedBy = "role")
-    public Set<Authority> authorities = new HashSet<>();
+    public Set<Authority> authority = new HashSet<>();
 
 }

@@ -22,5 +22,5 @@ public class Operator {
     public String mobile;
 
     @ManyToMany(mappedBy = "operator")
-    public Set<Authority> authorities = new HashSet<>();
+    public Set<Authority> authority= new HashSet<>();
 }
