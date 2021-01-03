@@ -16,7 +16,8 @@ public class OperatorDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User.UserBuilder touhid = User.builder().username("touhid").password(passwordEncoder.encode("touhid")).roles("USER");
+        User.UserBuilder touhid = User.builder().username("touhid").password(passwordEncoder.encode("touhid"))
+                .roles("ADMIN");
         return touhid.build();
     }
 
