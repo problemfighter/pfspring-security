@@ -8,6 +8,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 @Service
 public class OperatorDetailsService implements UserDetailsService {
 
@@ -16,9 +19,11 @@ public class OperatorDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User.UserBuilder touhid = User.builder().username("touhid").password(passwordEncoder.encode("touhid"))
-                .roles("ADMIN");
-        return touhid.build();
+        Map<String, UserDetails> data = new LinkedHashMap<>();
+        data.put("admin", User.builder().username("admin").password(passwordEncoder.encode("admin")).roles("ADMIN").build());
+        data.put("touhid", User.builder().username("touhid").password(passwordEncoder.encode("touhid")).roles("MANAGER").build());
+        data.put("sales", User.builder().username("sales").password(passwordEncoder.encode("sales")).roles("SALES").build());
+        return data.get(username);
     }
 
 }

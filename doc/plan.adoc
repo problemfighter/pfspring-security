@@ -24,4 +24,14 @@
 * Operator_Authority
 
 
+== Identity
+** Hock
+== AccessControl
+
+
+
+.References
+* https://programmer.group/spring-secutity-custom-rights-configuration.html
+* https://stackoverflow.com/questions/8381776/dynamic-spring-security-using-sql-query
+
 
