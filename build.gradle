@@ -72,7 +72,7 @@ task javadocJar(type: Jar) {
 }
 
 
-Boolean isPublish = true
+Boolean isPublish = false
 if (isPublish) {
     bintray {
 
